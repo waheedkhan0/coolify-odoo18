@@ -17,6 +17,7 @@ services:
       - POSTGRES_DB=${DB_NAME:-postgres}
       # Performance tuning
       - WORKERS=${ODOO_WORKERS:-2}
+      - ADDONS_PATH=/mnt/extra-addons,/usr/lib/python3/dist-packages/odoo/addons
     volumes:
       - odoo-data:/var/lib/odoo
       - ./addons:/mnt/extra-addons
